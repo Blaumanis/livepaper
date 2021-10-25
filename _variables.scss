@@ -1,0 +1,38 @@
+// variables
+$textColor: black;
+$mainColor: #3c3;
+$secondaryColor: hsl(240, 5%, 91%);
+$grayish: hsl(0, 0%, 51%);
+
+// mixins
+@mixin flex ($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin trans($var) {
+    transition-property: $var;
+    transition-duration: 350ms;
+    transition-timing-function: ease-in;
+}
+
+@mixin afterLine($backgroundColor) {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $backgroundColor;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    @include trans(transform);
+}
+
+@mixin afterLineHover {
+    transform: scaleX(1);
+    transform-origin: left;
+}
