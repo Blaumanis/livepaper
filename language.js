@@ -70,7 +70,7 @@
 
             missionH: 'Mūsu salmiņi - zaļākai ikdienai!',
             missionP1: 'PAPĪRA SALMIŅI UZ KURIEM TU UN MŪSU VIDE VAR PAĻAUTIES:',
-            missionP2: 'Mēs ražojam 100% videi draudzīgus un pilnībā bioloģiski noārdāmus papīra salmiņus, kas ir droši dabai un okeāniem. Mūsu mērķis ir aizstāt plastmasas salmiņus ar videi draudzīgāku alternatīvu, kas neapdraud dabu, bet pilda savu funkciju tik pat labi.Uzskatām, ka nedaudz izmainot mūsu paradumus, varam padarīt daudz tīrāku vidi un gaišāku nākotni.',
+            missionP2: 'Mēs ražojam 100% videi draudzīgus un pilnībā bioloģiski noārdāmus papīra salmiņus, kas ir droši dabai un okeāniem. Mūsu mērķis ir aizstāt plastmasas salmiņus ar videi draudzīgāku alternatīvu, kas neapdraud dabu, bet pilda savu funkciju tik pat labi. Uzskatām, ka nedaudz izmainot mūsu paradumus, varam padarīt daudz tīrāku vidi un gaišāku nākotni.',
 
             sendMsg: 'Sazinies ar mums',
             Name: 'Vārds',
