@@ -192,7 +192,7 @@ main {
         gap: 1rem;
         text-align: center;
         margin-top: 1rem;
-        margin-left: 2rem;
+        // margin-left: 2rem;
 
         p {
             padding: 1rem 1.5rem;
@@ -528,6 +528,11 @@ footer {
             color: $mainColor;
         }
     }
+
+    img {
+        position: relative;
+        z-index: -1000;
+    }
 }
 
 // media
@@ -639,7 +644,9 @@ footer {
 @media (max-width: 690px) {
     .about-us .properties-wrapper {
         flex-direction: column;
+        gap: 2rem !important;
     }
+
     .about-us .properties-wrapper article {
         width: 350px;
         padding: 1rem 1.25rem;
@@ -679,6 +686,10 @@ footer {
 }
 
 @media (max-width: 650px) {
+    .contacts {
+        gap: 3rem;
+    }
+
     table {
         font-size: 0.75rem;
     }
@@ -740,7 +751,7 @@ footer {
 
     .mission p {
             width: 100%;
-            text-align: center;
+            text-align: left;
         }
 
     table {
