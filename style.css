@@ -393,7 +393,6 @@ header {
   width: 100%;
   top: 0;
   background-color: white;
-  border-bottom: 1px solid;
   border-bottom: 1px solid #e7e7e9;
   display: -webkit-box;
   display: -ms-flexbox;
