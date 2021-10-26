@@ -392,8 +392,7 @@ header {
   z-index: 9999;
   width: 100%;
   top: 0;
-  background-color: #eeeeee;
-  opacity: 0.97;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,6 +405,11 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+header .logoImg {
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
 }
 
 header ul {
@@ -520,12 +524,13 @@ main {
 }
 
 main::before {
-  background-color: rgba(0, 0, 0, 0.17);
+  background-color: rgba(0, 0, 0, 0.37);
   content: '';
   display: block;
   height: 100%;
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 
 main .main-text {
@@ -545,6 +550,7 @@ main .main-text {
   gap: 2rem;
   color: white;
   text-align: center;
+  z-index: 2;
 }
 
 main .main-text h1 {
@@ -575,6 +581,7 @@ main .main-text p {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 1rem;
+  margin-top: 2rem;
 }
 
 .products h2 {
@@ -660,8 +667,8 @@ main .main-text p {
 
 .products .text-wrapper p {
   padding: 1rem 1.5rem;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
   width: 350px;
 }
 
@@ -855,13 +862,19 @@ table .fa-times {
           flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
-  margin: 2.5rem auto;
+  margin: 1rem auto 4rem;
 }
 
 .mission h3 {
   color: #3c3;
   font-size: 2.25rem;
   padding-bottom: 1rem;
+  display: inline;
+}
+
+.mission i {
+  color: #3c3;
+  font-size: 2.25rem;
 }
 
 .mission p {
@@ -895,20 +908,44 @@ table .fa-times {
 }
 
 .contacts {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  padding: 1rem;
-  margin-top: 5rem;
-  justify-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 1rem;
+  background: url("/img/coastal.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.contacts::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.37);
+  z-index: 1;
 }
 
 .contacts a {
-  color: black;
+  color: white;
   text-decoration: underline;
   -webkit-transition-property: color;
   transition-property: color;
@@ -936,6 +973,7 @@ table .fa-times {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 2;
 }
 
 .contacts form h3 {
@@ -1014,8 +1052,18 @@ table .fa-times {
           box-shadow: 2px 2px 5px black;
 }
 
+.contacts .contact-info {
+  z-index: 2;
+}
+
+.contacts .contact-info h3 {
+  font-size: 1.75rem;
+  padding-bottom: 0.25rem;
+}
+
 .contacts .contact-info p {
-  display: inline;
+  display: inline-block;
+  padding-bottom: 0.25rem;
 }
 
 footer {
@@ -1155,55 +1203,6 @@ footer i:hover {
   }
   table .fa-check {
     font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 730px) {
-  .contacts {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 400px 400px 100px;
-        grid-template-rows: 400px 400px 100px;
-    margin-left: 1rem;
-  }
-  .contacts .contacts form h3 {
-    text-align: center;
-  }
-  .contacts img {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-  }
-  .contacts form {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    margin: 0 auto;
-  }
-  .contacts form input {
-    width: 400px;
-  }
-  .contacts form textarea {
-    width: 400px;
-  }
-  .contacts form .btn {
-    width: 400px;
-  }
-  .contacts .contact-info {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3/4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
   }
 }
 
